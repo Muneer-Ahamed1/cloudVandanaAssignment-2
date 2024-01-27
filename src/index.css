@@ -1,0 +1,147 @@
+/* Add this style in your CSS file or as a style block in your component */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.display-4{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.validationDesc>.wrapper>h3{
+    font-size: 1.3rem;
+}
+.validationDesc>.wrapper>.popup{
+    font-size: 0.8rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+}
+
+.card-text {
+    font-size: 0.8rem;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width:60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .error-container {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .error-container {
+    text-align: center;
+  }
+
+  .error-code {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #dc3545;
+  }
+
+  .error-message {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #6c757d;
+  }
+
+  .back-home {
+    margin-top: 30px;
+  }
+@media (max-width: 768px) {
+    .validationDesc {
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.7rem;
+    }
+
+    .deploy-check {
+        font-size: 1rem;
+    }
+
+    .display-4 {
+
+        font-size: 1.4rem;
+        font-weight: 400;
+
+    }
+    .validationDesc>.wrapper>h3{
+        font-size: 1.1rem;
+    }
+    .validationDesc>.wrapper>.popup{
+        font-size: 0.7rem;
+    }
+    .navbar-brand{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .validationDesc {
+        font-size: 10px;
+    }
+
+    .card-title {
+        font-size: 0.7rem;
+    }
+
+    .card-text {
+        font-size: 0.5rem;
+    }
+
+    .deploy-check {
+        font-size: 0.7rem;
+    }
+
+    .display-4 {
+
+        font-size: 1.0rem;
+        font-weight: 400;
+
+    }
+    .validationDesc>.wrapper>h3{
+        font-size: 0.9rem;
+    }
+    .validationDesc>.wrapper>.popup{
+        font-size: 0.6rem;
+    }
+    .navbar-brand{
+        font-size: 1rem;
+    }
+    .error-container{
+        flex-direction: column;
+    }
+}
+
