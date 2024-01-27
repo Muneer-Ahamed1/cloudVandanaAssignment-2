@@ -4,7 +4,7 @@ function LoginAuth() {
     const dispatch=useDispatch();
     const [loginUrl,setLoginUrl]=useState("login");
     const clickMe=()=>{
-      window.location.href=`https://${loginUrl}.salesforce.com/services/oauth2/authorize?client_id=${import.meta.env.VITE_Client_Id}&redirect_uri=${import.meta.env.VITE_Redirect_Url}&response_type=token`
+      window.location.href=`https://${loginUrl}.salesforce.com/services/oauth2/authorize?client_id=${"3MVG9pRzvMkjMb6l1H0ThA6FCQDW2RgF0FCrfTZ17wTBzuiG6KunbHl7XlmxqXlQhx2MNxonBr2mgzVcW.E9M"}&redirect_uri=${"https://salesforceassignment-2.netlify.app/metaDataPage"}&response_type=token`
 
     }
   return (
