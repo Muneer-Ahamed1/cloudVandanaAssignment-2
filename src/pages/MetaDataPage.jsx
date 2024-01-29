@@ -29,6 +29,7 @@ return
         <button className='btn btn-danger logout btn-sm ' onClick={()=>{
         dispatch(logOut())
         location.reload();
+        location.href="/";
         history.replaceState(null, null, location.href);     
       }
         }>Logout</button>
