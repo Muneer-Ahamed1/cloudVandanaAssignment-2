@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Validation from '../features/validation/components/Validation'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllValidation } from "../features/validation/validationSlice";
+import {dumpGetValidation} from '../features/validation/validationApi'
 
 
 
@@ -18,7 +19,7 @@ function ValidationPage() {
     }, [])
     useEffect(()=>{
       if(updateData) {
-        dispatch(getAllValidation(isLogin));
+        dumpGetValidation(isLogin);
       }
     },[updateData])
     const validationData = useSelector((state) => state.validation.validationData);

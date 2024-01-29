@@ -1,6 +1,7 @@
 import { getValidation, patchByIdValidation } from "./validationApi";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { useDispatch,useSelector } from "react-redux";
+
 import { toast } from 'react-toastify';
 
 
@@ -64,22 +65,18 @@ const validation = createSlice({
         builder.addCase(getAllValidation.rejected,(state,{payload})=>{
             state.error.error=true;
             state.error.message=payload;
-            window.location.href="/";
-            
+            window.location.href="/";    
         })
         builder.addCase(patchByIdValidationSlice.pending, (state) => {
             state.loader.loading = true;
             state.updateData=false;
             state.loader.message="Deploy Meta Data"
-         
-
         })
         builder.addCase(patchByIdValidationSlice.fulfilled, (state, { payload }) => {
             state.loader.loading = false;
             state.loader.message="";
             toast.success("Deployed data");
-            state.updateData=true
-           
+            state.updateData=true     
         })
         builder.addCase(patchByIdValidationSlice.rejected,(state,{payload})=>{
             state.updateData=false;
@@ -88,7 +85,6 @@ const validation = createSlice({
             state.error.error=true;
             state.error.message=payload;
             toast.error("Something went wrong!!")
-
 
         })    
             
