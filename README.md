@@ -8,3 +8,10 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Hosting Link :=https://salesforce-assignment-2.netlify.app/
+
+Assignment-2 Approach:-
+<p>React js fronted did api call to Node  Js Backend</p>
+<p>Node js backend for api call for Salesforce API</p>
+<p>Now why did i use backend because i was facing cors issues .</p> 
+<p>Authorization grant type i used is user agent</p>
+
