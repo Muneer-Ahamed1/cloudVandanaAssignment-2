@@ -1,6 +1,8 @@
 import { getValidation, patchByIdValidation } from "./validationApi";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { useDispatch,useSelector } from "react-redux";
 import { toast } from 'react-toastify';
+
 
 
 
@@ -14,7 +16,7 @@ export const getAllValidation = createAsyncThunk("/api/getAllValidation", async 
     }
     catch (e) {
         console.log("Error in getting all validation data");
-        thunkApi.rejectWithValue(e);
+        throw thunkApi.rejectWithValue(e);
 
     }
 
@@ -74,6 +76,10 @@ const validation = createSlice({
             state.loader.loading = false;
             state.loader.message="";
             toast.success("Deployed data");
+            // const dispatch=useDispatch();
+            // const data=useSelector((state)=>state.auth.isLogin);
+            // console.log(data);
+            // dispatch(getAllValidation(data));
         })
         builder.addCase(patchByIdValidationSlice.rejected,(state,{payload})=>{
             state.loader.loading=false;

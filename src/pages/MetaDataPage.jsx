@@ -28,8 +28,9 @@ return
         <Link className='btn btn-primary metatdata btn-sm' to={"/validationPage"}>Get MetaData</Link>
         <button className='btn btn-danger logout btn-sm ' onClick={()=>{
         dispatch(logOut())
-        window.location.href="/";
-        }
+        location.reload();
+        history.replaceState(null, null, location.href);     
+      }
         }>Logout</button>
       </div>
     </div>

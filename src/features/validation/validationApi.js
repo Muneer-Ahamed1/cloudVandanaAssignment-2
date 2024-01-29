@@ -43,7 +43,10 @@ export const patchByIdValidation = async (items) => {
   try{
   const response=await instanceBackend.patch("/deployData",items,headers);
   console.log(response)
+  if(response.status==200) {
   return response;
+  }
+  throw new Error(response);
   }
   catch(e){
     throw Error(e);

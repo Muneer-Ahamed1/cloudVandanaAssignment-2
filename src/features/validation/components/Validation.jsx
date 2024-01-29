@@ -57,7 +57,6 @@ function Validation({ validationData }) {
         })
       );
       setDump([]);
-      setPrev(dump);
     }
   };
 
@@ -83,7 +82,10 @@ function Validation({ validationData }) {
         <div className="col-md-6 mb-2">
           <button className='btn btn-danger logout btn-sm ' onClick={() => {
             dispatch(logOut())
-            window.location.href = "/";
+            location.reload();
+            history.replaceState(null, null, location.href);
+
+
           }
           }>Logout</button>
         </div>
