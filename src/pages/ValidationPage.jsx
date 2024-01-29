@@ -6,13 +6,21 @@ import { getAllValidation } from "../features/validation/validationSlice";
 
 
 
+
 function ValidationPage() {
     const dispatch = useDispatch();
     const isLogin=useSelector((state)=>state.auth.isLogin);
+    const updateData=useSelector((state)=>state.validation.updateData);
+  
     useEffect(() => {
         dispatch(getAllValidation(isLogin));
 
     }, [])
+    useEffect(()=>{
+      if(updateData) {
+        dispatch(getAllValidation(isLogin));
+      }
+    },[updateData])
     const validationData = useSelector((state) => state.validation.validationData);
 
 

@@ -41,6 +41,7 @@ const validation = createSlice({
             message:""
         },
         validationData: null,
+        updateData:false,
         error: {
             error: false,
             message: ""
@@ -68,6 +69,7 @@ const validation = createSlice({
         })
         builder.addCase(patchByIdValidationSlice.pending, (state) => {
             state.loader.loading = true;
+            state.updateData=false;
             state.loader.message="Deploy Meta Data"
          
 
@@ -76,12 +78,11 @@ const validation = createSlice({
             state.loader.loading = false;
             state.loader.message="";
             toast.success("Deployed data");
-            // const dispatch=useDispatch();
-            // const data=useSelector((state)=>state.auth.isLogin);
-            // console.log(data);
-            // dispatch(getAllValidation(data));
+            state.updateData=true
+           
         })
         builder.addCase(patchByIdValidationSlice.rejected,(state,{payload})=>{
+            state.updateData=false;
             state.loader.loading=false;
             state.loader.message="";
             state.error.error=true;
