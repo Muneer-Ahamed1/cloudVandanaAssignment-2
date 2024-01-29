@@ -10,8 +10,11 @@ Currently, two official plugins are available:
 Hosting Link :=https://salesforce-assignment-2.netlify.app/
 
 Assignment-2 Approach:-
-React js fronted did api call to Node  Js Backend
-Node js backend for api call for Salesforce API
-Now why did i use backend because i was facing cors issues . 
-Authorization grant type i used is user agent
+<p>React js fronted did api call to Node  Js Backend</p>
+<br/>
+<p>Node js backend for api call for Salesforce API</p>
+<br/>
+<p>Now why did i use backend because i was facing cors issues .</p> 
+<br/>
+<p>Authorization grant type i used is user agent</p>
 
