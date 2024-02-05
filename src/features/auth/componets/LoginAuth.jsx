@@ -5,6 +5,7 @@ function LoginAuth() {
     const [loginUrl,setLoginUrl]=useState("login");
     const clickMe=()=>{
       window.location.href=`https://${loginUrl}.salesforce.com/services/oauth2/authorize?client_id=${"3MVG9pRzvMkjMb6l1H0ThA6FCQDW2RgF0FCrfTZ17wTBzuiG6KunbHl7XlmxqXlQhx2MNxonBr2mgzVcW.E9M"}&redirect_uri=${"https://salesforceassignment-2.netlify.app/metaDataPage"}&response_type=token`
+      console.log("User Agent");
 
     }
   return (
